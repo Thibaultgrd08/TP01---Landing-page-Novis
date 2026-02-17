@@ -1,0 +1,13 @@
+/* ===== FOND D'ARRIÈRE-PLAN ===== */
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('../../assets/img/fd_1.jpg') no-repeat center center/cover;
+    filter: blur(40px) brightness(0.4) saturate(0.8);
+    transform: scale(1.1);
+}

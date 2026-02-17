@@ -1,0 +1,165 @@
+/* ===== DASHBOARD & CARTES ===== */
+
+.dashboard-container {
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet de reflet en haut */
+.dashboard-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.net-worth-label {
+    font-size: 0.85rem;
+    color: var(--secondary);
+}
+
+.net-worth-value {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Inter', monospace;
+}
+
+/* Grille interne du dashboard */
+.dash-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* Carte générique */
+.card {
+    background: rgba(13, 27, 42, 0.5);
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* --- Graphique en barres --- */
+.chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 150px;
+    padding-top: 10px;
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 12%;
+}
+
+.bar {
+    width: 100%;
+    background: var(--secondary);
+    border-radius: 4px;
+    opacity: 0.7;
+    transition: height 1s ease-out;
+    position: relative;
+}
+
+.bar.active {
+    background: var(--accent);
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(224, 225, 221, 0.2);
+}
+
+.month {
+    font-size: 0.7rem;
+    color: var(--secondary);
+}
+
+/* --- Liste d'actifs (Asset Allocation) --- */
+.asset-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.asset-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.asset-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.progress-bg {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-top: 6px;
+    width: 100%;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 2px;
+}
+
+/* Couleurs des actifs */
+.c-stocks {
+    color: #A2D2FF;
+    background-color: #A2D2FF;
+}
+
+.c-realestate {
+    color: #E0E1DD;
+    background-color: #E0E1DD;
+}
+
+.c-crypto {
+    color: #2DC653;
+    background-color: #2DC653;
+}
+
+@media (max-width: 900px) {
+    .dashboard-container {
+        margin-top: 1.5rem;
+    }
+
+    .dash-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dash-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

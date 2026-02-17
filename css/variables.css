@@ -1,0 +1,23 @@
+/* ===== VARIABLES & RESET ===== */
+
+:root {
+    /* Palette définie */
+    --bg-deep: #0D1B2A;       /* Fond profond */
+    --primary: #1B263B;       /* Bleu Nuit Institutionnel */
+    --secondary: #415A77;     /* Bleu Acier (Textes secondaires) */
+    --accent: #E0E1DD;        /* Or Subtil (CTA & Highlights) */
+    --text-main: #F8F9FA;     /* Blanc Cassé (Lisibilité) */
+    --success: #2DC653;       /* Vert Finance */
+    --danger: #D90429;        /* Rouge Perte */
+    
+    /* Paramètres UI */
+    --glass-bg: rgba(27, 38, 59, 0.65);
+    --glass-border: 1px solid rgba(224, 225, 221, 0.15);
+    --blur-amount: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
