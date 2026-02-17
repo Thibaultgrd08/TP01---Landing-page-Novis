@@ -1,4 +1,6 @@
-NOVIS : ![alt text](assets/img/image_desk.png) ![alt text](assets/img/image_mobile.png)
+NOVIS : 
+![alt text](assets/img/image_desk.png) 
+![alt text](assets/img/image_mobile.png)
 
 ❓Expliquez ce qu’est le Layout Shift.
 --> Le layout shift, c'est quand des éléments se déplacent soudainement après le chargement (ex: une image qui arrive tard).

@@ -1,0 +1,82 @@
+
+/* ===== TABLEAU DES ACTIFS ===== */
+
+.actif-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.actif-grid thead {
+    background: var(--primary);
+    border-bottom: 2px solid rgba(224, 225, 221, 0.1);
+}
+
+.actif-grid th {
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.actif-grid tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.actif-grid tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.actif-grid td {
+    padding: 1rem;
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+.actif-grid tfoot {
+    background: rgba(13, 27, 42, 0.8);
+    border-top: 2px solid rgba(224, 225, 221, 0.1);
+    font-weight: 600;
+}
+
+.actif-grid tfoot td {
+    padding: 1.2rem 1rem;
+    color: var(--accent);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+.text-danger {
+    color: var(--danger);
+}
+
+.text-right {
+    text-align: right;
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+}
+
+
+
+@media (max-width: 900px) {
+    .actif-grid {
+        font-size: 0.85rem;
+    }
+
+    .actif-grid th,
+    .actif-grid td {
+        padding: 0.75rem;
+    }
+}
